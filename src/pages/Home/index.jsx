@@ -1,7 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { useLanguageContext } from "../../utils/Context/languageContext";
-import Header from "../../components/Header";
 import Icon from "../../images/aliceabidinepic.png";
 import AnimationWave from "../../components/Animation/wave.jsx";
 import {
@@ -30,7 +29,6 @@ function Home() {
     <HomeContainer ref={container}>
       <AnimationWave />
       <HomeContentContainer>
-
         <HomeGrid>
           <motion.div style={{ y: animationText }}>
             <HomeTextBox>

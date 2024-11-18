@@ -10,6 +10,10 @@ export const ErrorContainer = styled(Box)(() => ({
   backgroundRepeat: `no-repeat`,
   backgroundSize: `cover`,
   position: "relative",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  paddingTop: "70px",
 }));
 
 //TEXT
@@ -17,8 +21,15 @@ export const ErrorContainer = styled(Box)(() => ({
 export const ErrorText = styled(Typography)(({ theme }) => ({
   textAlign: "center",
   zIndex: "3",
-
   [theme.breakpoints.down("md")]: {
-    fontSize: " 18px",
+    fontSize: " 25px",
+  },
+}));
+
+//IMG
+
+export const ErrorImg = styled("img")(({ theme }) => ({
+  [theme.breakpoints.down("md")]: {
+      width: " 350px",
   },
 }));
