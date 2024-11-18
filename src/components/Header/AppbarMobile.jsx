@@ -12,17 +12,22 @@ import { AppBarMLink } from "../../styles/header";
 function AppbarMobile() {
   const { t } = useLanguageContext();
   const [isOpen, setOpen] = useState(false);
+  const closeNav = () =>{
+    setOpen(false)
+  };
   const ref = useRef(null);
 
   return (
-    <Box>
+    <Box sx={{backgroundColor:"#FED3CE"}}>
       <Box
         ref={ref}
         sx={{
           display: "flex",
           justifyContent: "flex-end",
           position:"relative",
-          right:"14px"
+          right:"14px",
+          alignItems:"center",
+          height:"60px"
         }}
       >
         <Hamburger
@@ -45,7 +50,8 @@ function AppbarMobile() {
               backgroundColor: Colors.bgFooter,
               position: "absolute",
               width: "100%",
-              zIndex: "99",
+              height:"100vh",
+              zIndex: "100",
               paddingBottom: "35px",
             }}
             component={motion.div}
@@ -73,6 +79,7 @@ function AppbarMobile() {
                   delay: 0.1 + 1 / 10,
                 }}
                 key={2}
+                onClick={closeNav}
               >
                 {t("nav1")}
               </AppBarMLink>
@@ -97,6 +104,7 @@ function AppbarMobile() {
                   delay: 0.1 + 2 / 10,
                 }}
                 key={3}
+                onClick={closeNav}
               >
                 {t("nav2")}
               </AppBarMLink>
@@ -121,6 +129,7 @@ function AppbarMobile() {
                   delay: 0.1 + 3 / 10,
                 }}
                 key={4}
+                onClick={closeNav}
               >
                 {t("nav3")}
               </AppBarMLink>
@@ -145,6 +154,7 @@ function AppbarMobile() {
                   delay: 0.1 + 4 / 10,
                 }}
                 key={5}
+                onClick={closeNav}
               >
                 {t("nav4")}
               </AppBarMLink>
@@ -161,6 +171,7 @@ function AppbarMobile() {
                 delay: 0.1 + 6 / 10,
               }}
               key={6}
+              onClick={closeNav}
             >
               <Language />
             </AppBarMLink>

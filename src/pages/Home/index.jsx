@@ -30,7 +30,7 @@ function Home() {
     <HomeContainer ref={container}>
       <AnimationWave />
       <HomeContentContainer>
-        <Header />
+
         <HomeGrid>
           <motion.div style={{ y: animationText }}>
             <HomeTextBox>

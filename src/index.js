@@ -9,6 +9,8 @@ import "./i18next";
 import Main from "./pages/Main";
 import Error from "./pages/Error"
 import reportWebVitals from "./reportWebVitals";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -16,10 +18,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <ThemeProvider theme={theme}>
       <LanguageContextProvider>
         <Router>
+          <Header/>
           <Routes>
             <Route path="/" element={<Main/>}/>
             <Route path="*" element={<Error />}/>
           </Routes> 
+          <Footer/>
         </Router>
         
       </LanguageContextProvider>

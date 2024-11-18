@@ -7,7 +7,7 @@ export default function AnimationWave() {
         style={{
           position: "absolute",
           width: "100%",
-          bottom: "-1",
+          bottom: "0",
           zIndex: "99",
         }}
         viewBox="0 0 1200 300"

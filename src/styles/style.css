@@ -5,3 +5,8 @@
   margin: 0;
   padding: 0;
 }
+
+body .crisp-client{
+  position: absolute;
+  z-index: 99;
+}

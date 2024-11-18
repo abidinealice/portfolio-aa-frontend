@@ -10,6 +10,7 @@ export const AppbarContainer = styled(Box)(() => ({
   justifyContent: "space-between",
   alignItems: "center",
   gap: "50px",
+  backgroundColor:"#481010"
 }));
 
 //IMAGE
@@ -52,6 +53,7 @@ export const AppbarTypography = styled(Typography)(() => ({}));
 
 export const AppBarMLink = styled(Typography)(({ theme }) => ({
   cursor: "pointer",
+  marginLeft:"20px",
   [theme.breakpoints.down("md")]: {
     fontSize: "18px",
   },
