@@ -43,5 +43,6 @@
   "contactForm2": "E-mail",
   "contactForm3": "Message",
   "contactForm4": "Envoyez",
-  "footerText": "©2024 Alice Abidine. Tous droits réservés."
+  "footerText": "©2024 Alice Abidine. Tous droits réservés.",
+  "errorText":"Retour"
 }

@@ -1,31 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@emotion/react";
 import "./styles/style.css";
 import theme from "./styles/theme";
 import { LanguageContextProvider } from "./utils/Context/languageContext";
 import "./i18next";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Projects from "./pages/Projects";
-import Skills from "./pages/Skills";
-import Contact from "./pages/Contact";
-import Footer from "./components/Footer";
+import Main from "./pages/Main";
+import Error from "./pages/Error"
 import reportWebVitals from "./reportWebVitals";
-import { Box } from "@mui/system";
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <LanguageContextProvider>
-        <Box>
-          <Home />
-          <About />
-          <Projects />
-          <Skills />
-          <Contact />
-          <Footer />
-        </Box>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Main/>}/>
+            <Route path="*" element={<Error />}/>
+          </Routes> 
+        </Router>
+        
       </LanguageContextProvider>
     </ThemeProvider>
   </React.StrictMode>,
