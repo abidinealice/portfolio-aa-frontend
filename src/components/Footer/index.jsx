@@ -18,14 +18,12 @@ function Footer() {
         <Link
           href="https://github.com/abidinealice"
           underline="none"
-          color={Colors.primary}
         >
           <GitHubIcon />
         </Link>
         <Link
           href="https://www.linkedin.com/in/alice-abidine"
           underline="none"
-          color={Colors.primary}
         >
           <LinkedInIcon />
         </Link>

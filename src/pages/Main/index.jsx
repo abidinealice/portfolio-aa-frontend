@@ -12,8 +12,8 @@ function Main() {
         <Header/>
         <Home/>
         <About/>
-        <Projects/>
         <Skills/>
+        <Projects/>
         <Contact/>
       </div>
     );

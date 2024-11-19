@@ -10,7 +10,7 @@ export const AppbarContainer = styled(Box)(() => ({
   justifyContent: "space-between",
   alignItems: "center",
   gap: "50px",
-  backgroundColor:"#481010"
+  backgroundColor: Colors.mainBG,
 }));
 
 //IMAGE
@@ -39,19 +39,15 @@ export const AppbarListItem = styled(ListItem)(() => ({
 
 export const AppbarBtn = styled(Button)(() => ({
   variants: "contained",
-  backgroundColor: Colors.primary,
-  color: "#fff",
-  ":hover": {
-    backgroundColor: "#fff",
-    color: Colors.primary,
-  },
 }));
 
 //TEXT
 
-export const AppbarTypography = styled(Typography)(() => ({}));
+export const AppbarTypography = styled(Typography)(() => ({
+}));
 
 export const AppBarMLink = styled(Typography)(({ theme }) => ({
+  color: Colors.mainMenuText,
   cursor: "pointer",
   marginLeft:"20px",
   [theme.breakpoints.down("md")]: {

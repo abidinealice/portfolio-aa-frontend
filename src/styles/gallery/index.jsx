@@ -51,20 +51,12 @@ export const GalleryBtnGrid = styled(Grid2)(() => ({
 
 //BUTTON
 export const GalleryFilterBtn = styled(Button)(({ theme }) => ({
-  color: "#fff",
-  "&:hover": {
-    color: Colors.primary,
-  },
   [theme.breakpoints.down("md")]: {
     fontSize: "15px",
   },
 }));
 
 export const GalleryModalBtn = styled(Button)(({ theme }) => ({
-  color: "#fff",
-  "&:hover": {
-    color: Colors.primary,
-  },
   [theme.breakpoints.down("md")]: {
     fontSize: "15px",
   },

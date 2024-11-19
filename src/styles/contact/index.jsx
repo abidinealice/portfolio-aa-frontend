@@ -7,9 +7,7 @@ import bgHome from "../../images/bgContact.svg";
 
 export const ContactContainer = styled(Box)(() => ({
   minHeight: `50svh`,
-  backgroundImage: `url(${bgHome})`,
-  backgroundRepeat: `no-repeat`,
-  backgroundSize: `cover`,
+  backgroundColor: Colors.secondBG,
   position: "relative",
 }));
 

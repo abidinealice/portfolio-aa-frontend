@@ -3,7 +3,15 @@ import "@fontsource/afacad";
 
 export const Colors = {
   primary: "#481010",
-  bgFooter: "#FED3CE",
+  mainBG: "#6F4449",
+  secondBG:"#FFEFE7",
+  mainTitle:"#FFFFFF",
+  mainText:"#6F4449",
+  mainMenuText:"#FFFFFF",
+  footerText:"#FFFFFF",
+  buttonBG:"#FFEFE7",
+  buttonText:"#6F4449",
+  hamburgerMenu:"#FFFFFF",
 };
 
 const theme = () =>
@@ -18,7 +26,7 @@ const theme = () =>
     },
     typography: {
       allVariants: {
-        color: Colors.primary,
+        color: Colors.mainText,
         fontFamily: "'Afacad', 'cursive'",
         fontSize: 20,
       },
@@ -29,6 +37,7 @@ const theme = () =>
       h2: {
         fontSize: 40,
         fontWeight: "600",
+        color: Colors.mainTitle,
       },
     },
     components: {
@@ -48,11 +57,11 @@ const theme = () =>
           root: {
             fontSize: 18,
             borderRadius: 20,
-            backgroundColor: Colors.primary,
-            color: "#fff",
+            backgroundColor: Colors.buttonBG,
+            color: Colors.buttonText,
             "&:hover": {
-              backgroundColor: "#fff",
-              color: Colors.primary,
+              backgroundColor: Colors.buttonText,
+              color: Colors.buttonBG,
             },
           },
         },
@@ -62,19 +71,19 @@ const theme = () =>
           root: {
             fontSize: 18,
             borderBottom: 0,
-            backgroundColor: Colors.primary,
+            backgroundColor: Colors.buttonBG,
             borderRadius: 20,
             "&:hover": {
-              backgroundColor: Colors.primary,
+              backgroundColor: Colors.buttonBG,
               borderRadius: 20,
             },
           },
           input: {
-            color: "#fff",
-            backgroundColor: Colors.primary,
+            color: Colors.buttonText,
+            backgroundColor: Colors.buttonBG,
             borderRadius: 20,
             "&:hover": {
-              backgroundColor: Colors.primary,
+              backgroundColor: Colors.buttonBG,
               borderRadius: 20,
             },
           },
@@ -83,7 +92,7 @@ const theme = () =>
       MuiFormLabel: {
         styleOverrides: {
           asterisk: {
-            color: Colors.primary,
+            color: Colors.buttonBG,
           },
         },
       },

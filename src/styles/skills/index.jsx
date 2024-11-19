@@ -2,14 +2,13 @@ import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import bgHome from "../../images/bgAll.png";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import { Colors } from "../theme";
 
 //CONTAINER
 
 export const SkillsContainer = styled(Box)(() => ({
   minHeight: `100svh`,
-  backgroundImage: `url(${bgHome})`,
-  backgroundRepeat: `no-repeat`,
-  backgroundSize: `cover`,
+  backgroundColor: Colors.secondBG,
   position: "relative",
 }));
 

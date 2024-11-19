@@ -18,7 +18,7 @@ function AppbarMobile() {
   const ref = useRef(null);
 
   return (
-    <Box sx={{backgroundColor:"#FED3CE"}}>
+    <Box sx={{backgroundColor:Colors.mainBG}}>
       <Box
         ref={ref}
         sx={{
@@ -34,7 +34,7 @@ function AppbarMobile() {
           toggled={isOpen}
           toggle={setOpen}
           size={30}
-          color={Colors.primary}
+          color={Colors.hamburgerMenu}
           distance="lg"
         />
       </Box>
@@ -46,7 +46,7 @@ function AppbarMobile() {
               flexDirection: "column",
               alignItems: "start",
               gap: "15px",
-              backgroundColor: Colors.bgFooter,
+              backgroundColor: Colors.mainBG,
               position: "absolute",
               width: "100%",
               height:"100vh",

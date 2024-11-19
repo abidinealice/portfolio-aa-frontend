@@ -4,7 +4,7 @@ import { Colors } from "../theme";
 
 export const AnimationText = styled(Typography)(({ theme }) => ({
   textAlign: "center",
-  color: Colors.primary,
+  color: Colors.mainTitle,
   paddingTop: "12%",
   [theme.breakpoints.down("md")]: {
     fontSize: " 40px",

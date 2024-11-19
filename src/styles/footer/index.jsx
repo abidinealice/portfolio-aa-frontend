@@ -12,7 +12,7 @@ export const FooterContainer = styled(Box)(() => ({
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "column",
-  backgroundColor: Colors.bgFooter,
+  backgroundColor: Colors.mainBG,
   padding: "50px 30px 15px 30px",
 }));
 
@@ -21,14 +21,14 @@ export const FooterContainer = styled(Box)(() => ({
 export const FooterGridIcons = styled(Grid2)(() => ({
   display: "flex",
   gap: "20px",
-  color: Colors.primary,
+  color: Colors.footerText,
 }));
 
 //TEXT
 
 export const FooterTypography = styled(Typography)(({ theme }) => ({
   padding: "10px 0 0 0",
-  color: Colors.primary,
+  color: Colors.footerText,
   textAlign: "center",
   [theme.breakpoints.down("md")]: {
     fontSize: " 18px",
