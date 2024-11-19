@@ -40,7 +40,6 @@ function AppbarMobile() {
               display: "flex",
               flexDirection: "column",
               alignItems: "start",
-              paddingLeft:"25px",
               gap: "15px",
               backgroundColor: Colors.bgFooter,
               position: "absolute",
