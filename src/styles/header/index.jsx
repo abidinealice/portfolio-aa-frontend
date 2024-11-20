@@ -13,6 +13,43 @@ export const AppbarContainer = styled(Box)(() => ({
   backgroundColor: Colors.mainBG,
 }));
 
+export const AppbarMContainer = styled(Box)(() => ({
+  backgroundColor:Colors.mainBG
+}));
+
+export const AppBarMOpen = styled(Box)(() => ({
+  position: "absolute",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent:"center",
+  alignItems: "start",
+  gap: "30px",
+  width: "100%",
+  height:"100vh",
+  paddingBottom: "35px",
+  backgroundColor: Colors.mainBG,
+  zIndex: "100",  
+}))
+
+export const AppBarHambuger = styled(Box)(() => ({
+  position:"relative",
+  display: "flex",
+  justifyContent: "flex-end",
+  height:"60px",
+  right:"14px",
+  alignItems:"center",
+}))
+
+export const AppBarLinks = styled(Box)(({theme}) => ({
+  [theme.breakpoints.down("md")]: {
+    display:"flex",
+    color: Colors.mainMenuText,
+    cursor: "pointer",
+    marginLeft:"20px",
+    gap:"20px",
+  }
+}))
+
 //IMAGE
 
 export const AppbarImg = styled("img")(() => ({
@@ -54,3 +91,15 @@ export const AppBarMLink = styled(Typography)(({ theme }) => ({
     fontSize: "18px",
   },
 }));
+
+export const AppBarMSeparator = styled("span")(({theme}) => ({
+  [theme.breakpoints.down("md")]: {
+    display: "block",
+    width: "70%",
+    marginLeft: "20px",
+    marginTop:"25%",
+    borderBottom: "2px solid white",
+  },
+  
+}))
+ 

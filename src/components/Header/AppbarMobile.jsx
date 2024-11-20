@@ -3,11 +3,13 @@ import { useRef } from "react";
 import { Link } from "react-scroll";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLanguageContext } from "../../utils/Context/languageContext";
-import { Box } from "@mui/material";
 import { Spin as Hamburger } from "hamburger-react";
 import Language from "../Language";
 import { Colors } from "../../styles/theme";
-import { AppBarMLink } from "../../styles/header";
+import { AppbarMContainer, AppBarMOpen, AppBarHambuger, AppBarLinks, AppBarMLink, AppBarMSeparator } from "../../styles/header";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+
 
 function AppbarMobile() {
   const { t } = useLanguageContext();
@@ -18,17 +20,9 @@ function AppbarMobile() {
   const ref = useRef(null);
 
   return (
-    <Box sx={{backgroundColor:Colors.mainBG}}>
-      <Box
+    <AppbarMContainer>
+      <AppBarHambuger
         ref={ref}
-        sx={{
-          display: "flex",
-          justifyContent: "flex-end",
-          position:"relative",
-          right:"14px",
-          alignItems:"center",
-          height:"60px"
-        }}
       >
         <Hamburger
           toggled={isOpen}
@@ -37,22 +31,10 @@ function AppbarMobile() {
           color={Colors.hamburgerMenu}
           distance="lg"
         />
-      </Box>
+      </AppBarHambuger>
       <AnimatePresence>
         {isOpen && (
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "start",
-              gap: "15px",
-              backgroundColor: Colors.mainBG,
-              position: "absolute",
-              width: "100%",
-              height:"100vh",
-              zIndex: "100",
-              paddingBottom: "35px",
-            }}
+          <AppBarMOpen
             component={motion.div}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -86,7 +68,7 @@ function AppbarMobile() {
 
             <Link
               activeClass="active"
-              to="sectionProjects"
+              to="sectionSkills"
               spy={true}
               smooth={true}
               offset={50}
@@ -111,7 +93,7 @@ function AppbarMobile() {
 
             <Link
               activeClass="active"
-              to="sectionSkills"
+              to="sectionProjects"
               spy={true}
               smooth={true}
               offset={50}
@@ -159,8 +141,10 @@ function AppbarMobile() {
               </AppBarMLink>
             </Link>
 
-            <AppBarMLink
-              component={motion.p}
+            <AppBarMSeparator />
+
+            <AppBarLinks
+              component={motion.div}
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{
@@ -170,14 +154,18 @@ function AppbarMobile() {
                 delay: 0.1 + 6 / 10,
               }}
               key={6}
-              onClick={closeNav}
-            >
-              <Language />
-            </AppBarMLink>
-          </Box>
+              onClick={closeNav}>
+              
+                <GitHubIcon sx={{width: "40px", height: "40px"}}/>
+                <LinkedInIcon sx={{width: "45px", height: "45px"}}/>
+                <Language />
+
+            </AppBarLinks>
+
+          </AppBarMOpen>
         )}
       </AnimatePresence>
-    </Box>
+    </AppbarMContainer>
   );
 }
 

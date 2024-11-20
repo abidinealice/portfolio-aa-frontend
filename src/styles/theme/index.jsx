@@ -9,7 +9,7 @@ export const Colors = {
   mainText:"#6F4449",
   mainMenuText:"#FFFFFF",
   footerText:"#FFFFFF",
-  buttonBG:"#FFEFE7",
+  buttonBG:"#FFFFFF",
   buttonText:"#6F4449",
   hamburgerMenu:"#FFFFFF",
 };
@@ -62,6 +62,7 @@ const theme = () =>
             "&:hover": {
               backgroundColor: Colors.buttonText,
               color: Colors.buttonBG,
+              border: "1px solid white",
             },
           },
         },

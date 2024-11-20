@@ -7,7 +7,6 @@ import {
   FooterGridIcons,
   FooterTypography,
 } from "../../styles/footer";
-import { Colors } from "../../styles/theme";
 
 function Footer() {
   //Translation
