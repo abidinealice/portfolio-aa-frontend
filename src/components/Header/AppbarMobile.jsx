@@ -6,7 +6,7 @@ import { useLanguageContext } from "../../utils/Context/languageContext";
 import { Spin as Hamburger } from "hamburger-react";
 import Language from "../Language";
 import { Colors } from "../../styles/theme";
-import { AppbarMContainer, AppBarMOpen, AppBarHambuger, AppBarLinks, AppBarMLink, AppBarMSeparator } from "../../styles/header";
+import { AppbarMContainer, AppBarMOpen, AppBarHambuger, AppBarLinks, AppBarMLink, AppBarMSeparator, AppBarMIcon } from "../../styles/header";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
@@ -153,11 +153,17 @@ function AppbarMobile() {
                 damping: 20,
                 delay: 0.1 + 6 / 10,
               }}
-              key={6}
-              onClick={closeNav}>
-              
-                <GitHubIcon sx={{width: "40px", height: "40px"}}/>
-                <LinkedInIcon sx={{width: "45px", height: "45px"}}/>
+              key={6}>
+                <AppBarMIcon
+                  href="https://github.com/abidinealice"                  
+                >
+                  <GitHubIcon sx={{width: "40px", height: "40px"}}/>
+                </AppBarMIcon>              
+                <AppBarMIcon
+                  href="https://www.linkedin.com/in/alice-abidine"
+                >
+                  <LinkedInIcon sx={{width: "45px", height: "45px"}}/>
+                </AppBarMIcon>
                 <Language />
 
             </AppBarLinks>

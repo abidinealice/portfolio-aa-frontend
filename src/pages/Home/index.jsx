@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { useLanguageContext } from "../../utils/Context/languageContext";
-import Icon from "../../images/aliceabidinepic.png";
+import Icon from "../../images/iconAA.png";
 import AnimationWave from "../../components/Animation/wave.jsx";
 import {
   HomeContainer,
@@ -33,17 +33,13 @@ function Home() {
           <motion.div style={{ y: animationText }}>
             <HomeTextBox>
               <HomeTypographyTitle variant="h1">
-                {t("homeText1")}
+                ALICE ABIDINE
+              </HomeTypographyTitle>
+              <HomeTypographyTitle variant="h1">
+              {t("homeText4")}
               </HomeTypographyTitle>
               <HomeTypographySubtitle>
-                <span>{t("homeText2")}</span>{" "}
-                <span style={{ fontWeight: "bold" }}>ALICE ABIDINE</span>
-              </HomeTypographySubtitle>
-              <HomeTypographySubtitle>
-                <span>{t("homeText3")}</span>{" "}
-                <span style={{ fontWeight: "bold" }}>{t("homeText4")}</span>{" "}
-                <span>{t("homeText5")}</span>{" "}
-                <span style={{ fontWeight: "bold" }}>{t("homeText6")}</span>
+              {t("homeText6")}
               </HomeTypographySubtitle>
             </HomeTextBox>
           </motion.div>

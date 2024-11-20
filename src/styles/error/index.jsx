@@ -1,19 +1,17 @@
 import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import bgHome from "../../images/bgAll.png";
+import { Colors } from "../theme";
 
 //CONTAINER
 
 export const ErrorContainer = styled(Box)(() => ({
   minHeight: `100svh`,
-  backgroundImage: `url(${bgHome})`,
-  backgroundRepeat: `no-repeat`,
-  backgroundSize: `cover`,
   position: "relative",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   paddingTop: "70px",
+  backgroundColor: Colors.secondBG,
 }));
 
 //TEXT

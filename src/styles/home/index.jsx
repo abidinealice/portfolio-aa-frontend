@@ -1,7 +1,6 @@
 import { Box, Container, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { styled } from "@mui/material/styles";
-import bgHome from "../../images/bgHome400.svg";
 import { Colors } from "../theme";
 
 //CONTAINERS
@@ -25,17 +24,16 @@ export const HomeGrid = styled(Grid2)(({ theme }) => ({
   [theme.breakpoints.down("md")]: {
     flexDirection: "column-reverse",
     gap: "40px",
-    marginTop: "40%",
   },
 }));
 
 export const HomeTextBox = styled(Box)(({ theme }) => ({
-  textAlign: "center",
   display: "flex",
   flexDirection: "column",
   gap: "20px",
   [theme.breakpoints.down("md")]: {
     gap: "10px",
+    marginLeft:"40px"
   },
 }));
 
@@ -49,7 +47,7 @@ export const HomeTypographyTitle = styled(Typography)(({ theme }) => ({
 
 export const HomeTypographySubtitle = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down("md")]: {
-    fontSize: " 18px",
+    fontSize: " 25px",
   },
 }));
 
