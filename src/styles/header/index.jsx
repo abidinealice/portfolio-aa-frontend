@@ -45,7 +45,7 @@ export const AppBarLinks = styled(Box)(({theme}) => ({
     display:"flex",
     color: Colors.mainMenuText,
     cursor: "pointer",
-    marginLeft:"20px",
+    marginLeft:"50px",
     gap:"20px",
   }
 }))
@@ -88,15 +88,16 @@ export const AppBarMLink = styled(Typography)(({ theme }) => ({
   cursor: "pointer",
   marginLeft:"20px",
   [theme.breakpoints.down("md")]: {
-    fontSize: "18px",
+    fontSize: "24px",
+    marginLeft:"45px",
   },
 }));
 
 export const AppBarMSeparator = styled("span")(({theme}) => ({
   [theme.breakpoints.down("md")]: {
     display: "block",
-    width: "70%",
-    marginLeft: "20px",
+    width: "65%",
+    marginLeft:"45px",
     marginTop:"25%",
     borderBottom: "2px solid white",
   },
