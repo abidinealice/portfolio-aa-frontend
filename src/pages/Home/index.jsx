@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { useLanguageContext } from "../../utils/Context/languageContext";
 import Icon from "../../images/iconAA.png";
+import HomeIcon from '@mui/icons-material/Home';
 import AnimationWave from "../../components/Animation/wave.jsx";
 import {
   HomeContainer,
@@ -11,6 +12,7 @@ import {
   HomeTextBox,
   HomeTypographyTitle,
   HomeTypographySubtitle,
+  HomeLocationBox
 } from "../../styles/home";
 
 function Home() {
@@ -38,9 +40,12 @@ function Home() {
               <HomeTypographyTitle variant="h1">
               {t("homeText4")}
               </HomeTypographyTitle>
-              <HomeTypographySubtitle>
-              {t("homeText6")}
-              </HomeTypographySubtitle>
+              <HomeLocationBox>
+                <HomeIcon sx={{color:"#6F4449"}}/>
+                <HomeTypographySubtitle>
+                {t("homeText6")}
+                </HomeTypographySubtitle>
+              </HomeLocationBox>              
             </HomeTextBox>
           </motion.div>
           <HomeImg src={Icon} alt="Icon Alice Abidine" />

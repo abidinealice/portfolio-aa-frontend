@@ -24,24 +24,39 @@ export const HomeGrid = styled(Grid2)(({ theme }) => ({
   [theme.breakpoints.down("md")]: {
     flexDirection: "column-reverse",
     gap: "40px",
+    marginTop: "15%",
   },
 }));
 
 export const HomeTextBox = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
+  justifyContent: "center",
   gap: "20px",
+  border: "solid 1px #E8B7AB",
+  borderRadius: "0 35px 35px 35px",
+  backgroundColor: "#E8B7AB",
+  boxShadow: "5px 5px 3px #6f44493d",
+  height: "230px",
+  width:"300px",
   [theme.breakpoints.down("md")]: {
     gap: "10px",
-    marginLeft:"40px"
   },
 }));
+
+export const HomeLocationBox = styled(Box)(({theme}) =>({
+  margin: "0 30px",
+  display: "flex",
+  alignItems: "center",
+  gap: "7px"
+}))
 
 //TYPOGRAPHY
 
 export const HomeTypographyTitle = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down("md")]: {
-    fontSize: " 40px",
+    fontSize: " 35px",
+    margin:"0 30px",
   },
 }));
 
