@@ -13,7 +13,7 @@ export const HomeContainer = styled(Box)(() => ({
 
 export const HomeContentContainer = styled(Container)(() => ({
   position: "relative",
-  padding:'40px 0 0 0'
+  padding:"40px 0 0 0",
 }));
 
 export const HomeGrid = styled(Grid2)(({ theme }) => ({
