@@ -28,7 +28,7 @@ export const HomeGrid = styled(Grid2)(({ theme }) => ({
   },
 }));
 
-export const HomeTextBox = styled(Box)(({ theme }) => ({
+export const HomeBubbleBox = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",

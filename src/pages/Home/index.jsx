@@ -9,7 +9,7 @@ import {
   HomeContentContainer,
   HomeGrid,
   HomeImg,
-  HomeTextBox,
+  HomeBubbleBox,
   HomeTypographyTitle,
   HomeTypographySubtitle,
   HomeLocationBox
@@ -33,7 +33,7 @@ function Home() {
       <HomeContentContainer>
         <HomeGrid>
           <motion.div style={{ y: animationText }}>
-            <HomeTextBox>
+            <HomeBubbleBox>
               <HomeTypographyTitle variant="h1">
                 ALICE ABIDINE
               </HomeTypographyTitle>
@@ -46,7 +46,7 @@ function Home() {
                 {t("homeText6")}
                 </HomeTypographySubtitle>
               </HomeLocationBox>              
-            </HomeTextBox>
+            </HomeBubbleBox>
           </motion.div>
           <HomeImg src={Icon} alt="Icon Alice Abidine" />
         </HomeGrid>

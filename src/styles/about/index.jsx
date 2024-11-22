@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import bgHome from "../../images/bgAll.png";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { Colors } from "../theme";
 
@@ -16,7 +15,22 @@ export const AboutGrid = styled(Grid2)(() => ({
   display: "flex",
   flexDirection: "column",
   gap: "20px",
-  margin: "70px 15% 0 15%",
+  marginTop: "70px",
+  alignItems: "center",
+}));
+
+export const AboutBubbleBox = styled(Box)(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  border: "solid 1px #E8B7AB",
+  borderRadius: "0 35px 35px 35px",
+  backgroundColor: "#E8B7AB",
+  boxShadow: "5px 5px 3px #6f44493d",
+  height: "150px",
+  width:"385px",
+  [theme.breakpoints.down("md")]: {
+  },
 }));
 
 //TEXT

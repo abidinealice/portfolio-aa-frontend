@@ -1,5 +1,5 @@
 import { useLanguageContext } from "../../utils/Context/languageContext";
-import { AboutContainer, AboutGrid, AboutText } from "../../styles/about";
+import { AboutBubbleBox, AboutContainer, AboutGrid, AboutText } from "../../styles/about";
 import TextAnimation from "../../components/Animation/text";
 import AnimationJellyfish from "../../components/Animation/jellyfish";
 import AnimationBubbles2 from "../../components/Animation/bubbles2";
@@ -14,8 +14,12 @@ function About() {
       <AnimationJellyfish />
       <AnimationBubbles2 />
       <AboutGrid>
-        <AboutText>{t("aboutText1")}</AboutText>
-        <AboutText>{t("aboutText2")}</AboutText>
+        <AboutBubbleBox>
+          <AboutText>{t("aboutText1")}</AboutText>        
+        </AboutBubbleBox>
+        <AboutBubbleBox>
+          <AboutText>{t("aboutText2")}</AboutText>
+        </AboutBubbleBox>
       </AboutGrid>
     </AboutContainer>
   );
