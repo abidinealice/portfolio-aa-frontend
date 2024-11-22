@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { useLanguageContext } from "../../utils/Context/languageContext";
 import Icon from "../../images/iconAA.png";
 import HomeIcon from '@mui/icons-material/Home';
+import AnimationWave from "../../components/Animation/wave.jsx";
 import {
   HomeContainer,
   HomeContentContainer,
@@ -28,6 +29,7 @@ function Home() {
 
   return (
     <HomeContainer ref={container}>
+      <AnimationWave />
       <HomeContentContainer>
         <HomeGrid>
           <motion.div style={{ y: animationText }}>

@@ -14,7 +14,7 @@ export const AboutContainer = styled(Box)(() => ({
 export const AboutGrid = styled(Grid2)(() => ({
   display: "flex",
   flexDirection: "column",
-  gap: "20px",
+  gap: "50px",
   marginTop: "70px",
   alignItems: "center",
 }));
@@ -25,7 +25,7 @@ export const AboutBubbleBox = styled(Box)(({ theme }) => ({
   justifyContent: "center",
   border: "solid 1px #E8B7AB",
   borderRadius: "0 35px 35px 35px",
-  backgroundColor: "#E8B7AB",
+  backgroundColor: Colors.bubbleTextBG,
   boxShadow: "5px 5px 3px #6f44493d",
   height: "150px",
   width:"385px",

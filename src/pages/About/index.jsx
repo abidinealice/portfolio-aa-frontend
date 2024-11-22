@@ -15,7 +15,7 @@ function About() {
       <AnimationBubbles2 />
       <AboutGrid>
         <AboutBubbleBox>
-          <AboutText>{t("aboutText1")}</AboutText>        
+          <AboutText>{t("aboutText1")}</AboutText>
         </AboutBubbleBox>
         <AboutBubbleBox>
           <AboutText>{t("aboutText2")}</AboutText>

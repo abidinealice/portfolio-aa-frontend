@@ -12,7 +12,10 @@ import {
   SkillsTypographySubTitle,
   SkillsTypographyTxt,
   SkillsGrid,
+  SkillsBubbleBox,
+  SkillsBubbleTitleBox,
 } from "../../styles/skills";
+import { Colors } from "../../styles/theme/index.jsx";
 
 function Skills() {
   //Translation
@@ -22,7 +25,7 @@ function Skills() {
       <AnimationFishPuff />
       <AnimationBubbles2 />
 
-      <TextAnimation title={t("skillsTitle")} />
+      <TextAnimation title={t("skillsTitle")} color={Colors.secondTitle}/>
 
       <SkillsGrid
         container
@@ -35,11 +38,18 @@ function Skills() {
         {/*-------------------WEB DEV*/}
         {/*--------------------------------------------------------*/}
         <Grid2 item>
-          <SkillsTypographySubTitle variant="h2">
+          <SkillsBubbleTitleBox
+            container
+            justifyContent="center"
+            alignItems="center"
+            spacing={4}>
+            <SkillsTypographySubTitle variant="h2">
             Web Dev
           </SkillsTypographySubTitle>
+          </SkillsBubbleTitleBox>
+          
 
-          <Grid2
+          <SkillsBubbleBox
             container
             justifyContent="center"
             alignItems="center"
@@ -58,17 +68,24 @@ function Skills() {
                 </Stack>
               </Grid2>
             ))}
-          </Grid2>
+          </SkillsBubbleBox>
         </Grid2>
 
         {/*-------------------------------------------------------*/}
         {/*-------------------WEB DESIGN*/}
         {/*--------------------------------------------------------*/}
         <Grid2 item>
-          <SkillsTypographySubTitle variant="h2">
-            Web Design
-          </SkillsTypographySubTitle>
-          <Grid2
+          <SkillsBubbleTitleBox
+            container
+            justifyContent="center"
+            alignItems="center"
+            spacing={4}>
+            <SkillsTypographySubTitle variant="h2">
+              Web Design
+            </SkillsTypographySubTitle>
+          </SkillsBubbleTitleBox>
+          
+          <SkillsBubbleBox
             container
             direction="row"
             justifyContent="center"
@@ -88,17 +105,24 @@ function Skills() {
                 </Stack>
               </Grid2>
             ))}
-          </Grid2>
+          </SkillsBubbleBox>
         </Grid2>
 
         {/*-------------------------------------------------------*/}
         {/*-------------------TOOLS*/}
         {/*--------------------------------------------------------*/}
         <Grid2 item>
-          <SkillsTypographySubTitle variant="h2">
-            {t("skillsSubTitle")}
-          </SkillsTypographySubTitle>
-          <Grid2
+          <SkillsBubbleTitleBox
+            container
+            justifyContent="center"
+            alignItems="center"
+            spacing={4}>
+            <SkillsTypographySubTitle variant="h2">
+              {t("skillsSubTitle")}
+            </SkillsTypographySubTitle>
+          </SkillsBubbleTitleBox>
+          
+          <SkillsBubbleBox
             container
             direction="row"
             justifyContent="center"
@@ -118,7 +142,7 @@ function Skills() {
                 </Stack>
               </Grid2>
             ))}
-          </Grid2>
+          </SkillsBubbleBox>
         </Grid2>
       </SkillsGrid>
     </SkillsContainer>

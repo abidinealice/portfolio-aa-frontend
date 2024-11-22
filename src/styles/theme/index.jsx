@@ -6,12 +6,15 @@ export const Colors = {
   mainBG: "#6F4449",
   secondBG:"#FFEFE7",
   mainTitle:"#FFFFFF",
+  secondTitle:"#6F4449",
   mainText:"#6F4449",
   mainMenuText:"#FFFFFF",
   footerText:"#FFFFFF",
   buttonBG:"#FFFFFF",
   buttonText:"#6F4449",
   hamburgerMenu:"#FFFFFF",
+  bubbleTitleBG:"#6F4449",
+  bubbleTextBG:"#E8B7AB",
 };
 
 const theme = () =>

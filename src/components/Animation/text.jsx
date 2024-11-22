@@ -2,10 +2,10 @@ import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import { AnimationText } from "../../styles/animation";
 
-export default function TextAnimation({ title }) {
+export default function TextAnimation({ title, color }) {
   const text = title.split(" ");
   return (
-    <AnimationText variant="h1">
+    <AnimationText variant="h1" sx={{color: color}}>
       {text.map((el, i) => (
         <motion.span
           whileInView="visible"
@@ -30,4 +30,5 @@ export default function TextAnimation({ title }) {
 
 TextAnimation.propTypes = {
   title: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
 };
