@@ -1,7 +1,6 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { Colors } from "../theme";
-import bgHome from "../../images/bgContact.svg";
 
 //CONTAINER
 
@@ -16,10 +15,26 @@ export const ContactGrid = styled(Box)(({ theme }) => ({
   justifyContent: "center",
   gap: "200px",
   marginTop: "60px",
+  paddingBottom: "30px",
   [theme.breakpoints.down("md")]: {
     flexDirection: "column",
     gap: "0",
     alignItems: "center",
+  },
+}));
+
+export const ContactBubbleBox = styled(Box)(({ theme }) => ({
+  border: "solid 1px #E8B7AB",
+  borderRadius: "0 35px 35px 35px",
+  backgroundColor: Colors.bubbleTextBG,
+  boxShadow: "5px 5px 3px #6f44493d",
+  width: "300px",
+  height: "200px",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  gap: "20px",
+  [theme.breakpoints.down("md")]: {
   },
 }));
 

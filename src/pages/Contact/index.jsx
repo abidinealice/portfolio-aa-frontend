@@ -12,6 +12,7 @@ import {
   ContactContainer,
   ContactText,
   ContactGrid,
+  ContactBubbleBox,
 } from "../../styles/contact";
 
 function Contact() {
@@ -25,12 +26,12 @@ function Contact() {
       <TextAnimation title={t("contactTitle")} />
 
       <ContactGrid sx={{ position: "relative", zIndex: "2" }}>
-        <div>
+        <ContactBubbleBox>
           <Stack
             direction="row"
             alignItems="center"
             gap={2}
-            sx={{ paddingBottom: "20px" }}
+            sx={{ margin: "0 30px" }}
           >
             <DownloadIcon color="secondary" />
             <Link
@@ -46,7 +47,7 @@ function Contact() {
             direction="row"
             alignItems="center"
             gap={2}
-            sx={{ paddingBottom: "20px" }}
+            sx={{ margin: "0 30px" }}
           >
             <MailOutlineIcon color="secondary" />
             <ContactText>{t("contactText1")}</ContactText>
@@ -55,7 +56,7 @@ function Contact() {
             direction="row"
             alignItems="center"
             gap={2}
-            sx={{ paddingBottom: "20px" }}
+            sx={{ margin: "0 30px" }}
           >
             <LinkedInIcon color="secondary" />
             <Link
@@ -70,7 +71,7 @@ function Contact() {
             direction="row"
             alignItems="center"
             gap={2}
-            sx={{ paddingBottom: "20px" }}
+            sx={{ margin: "0 30px" }}
           >
             <GitHubIcon color="secondary" />
             <Link
@@ -81,7 +82,7 @@ function Contact() {
               <ContactText>Github</ContactText>
             </Link>
           </Stack>
-        </div>
+        </ContactBubbleBox>
         
       </ContactGrid>
     </ContactContainer>
