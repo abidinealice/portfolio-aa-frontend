@@ -23,7 +23,7 @@ function Contact() {
       <AnimationOctopus />
       <AnimationBubbles3 />
 
-      <TextAnimation title={t("contactTitle")} />
+      <TextAnimation title={t("contactTitle")} color={Colors.secondTitle} />
 
       <ContactGrid sx={{ position: "relative", zIndex: "2" }}>
         <ContactBubbleBox>
