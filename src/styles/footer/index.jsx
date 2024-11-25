@@ -13,7 +13,7 @@ export const FooterContainer = styled(Box)(() => ({
   alignItems: "center",
   flexDirection: "column",
   backgroundColor: Colors.mainBG,
-  padding: "50px 30px 15px 30px",
+  padding: "20px",
 }));
 
 //ICON

@@ -10,6 +10,7 @@ export const GalleryContainer = styled(Grid2)(() => ({
   flexDirection: "column",
   gap: "20px",
   margin: "70px 15% 0 15%",
+  paddingBottom:"30px"
 }));
 
 export const GalleryProjectsBox = styled(Box)(({ theme }) => ({
@@ -70,6 +71,7 @@ export const GalleryTitle = styled(Typography)(({ theme }) => ({
   fontSize: "25PX",
   [theme.breakpoints.down("md")]: {
     fontSize: "18px",
+    with: "max-content",
   },
 }));
 

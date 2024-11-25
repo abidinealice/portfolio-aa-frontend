@@ -30,6 +30,7 @@ function Gallery() {
   const [open, setOpen] = React.useState(false);
   const [open2, setOpen2] = React.useState(false);
   const [open3, setOpen3] = React.useState(false);
+  const [open7, setOpen7] = React.useState(false);
 
   const handleOpen = () => {
     setOpen(true);
@@ -40,14 +41,19 @@ function Gallery() {
   const handleOpen3 = () => {
     setOpen3(true);
   };
+  const handleOpen7 = () => {
+    setOpen7(true);
+  };
   const handleClose = () => setOpen(false);
   const handleClose2 = () => setOpen2(false);
   const handleClose3 = () => setOpen3(false);
+  const handleClose7 = () => setOpen7(false);
 
   //Buttons Filter
   const [state, setState] = useState("flex");
   const [state2, setState2] = useState("flex");
   const [state3, setState3] = useState("flex");
+  const [state7, setState7] = useState("flex");
 
   const handleBtns = (e) => {
     let btnName = e.target.value;
@@ -55,14 +61,22 @@ function Gallery() {
       setState("flex");
       setState2("flex");
       setState3("flex");
+      setState7("flex");
     } else if (btnName === "FrontEnd") {
       setState("flex");
       setState2("flex");
       setState3("none");
+      setState7("none");
     } else if (btnName === "BackEnd") {
       setState("none");
       setState2("none");
       setState3("flex");
+      setState7("none");
+    } else if (btnName === "Game") {
+      setState("none");
+      setState2("none");
+      setState3("none");
+      setState7("flex");
     }
   };
   return (
@@ -90,6 +104,13 @@ function Gallery() {
           onClick={handleBtns}
         >
           {t("projectBtn3")}
+        </GalleryFilterBtn>
+        <GalleryFilterBtn
+          variant="contained"
+          value="Game"
+          onClick={handleBtns}
+        >
+          {t("projectBtn4")}
         </GalleryFilterBtn>
       </GalleryBtnGrid>
 
@@ -198,6 +219,38 @@ function Gallery() {
               alt={t("galleryMVGAltModal")}
             />
             <GalleryModalBtn onClick={handleOpen3} value="BackEnd">
+              {t("galleryBtn")}
+            </GalleryModalBtn>
+          </GalleryProjectsGridItem>
+
+          {/*-------------------------------------------------------*/}
+          {/*-------------------VISUAL NOVEL*/}
+          {/*--------------------------------------------------------*/}
+
+          <GalleryProjectsGridItem item xs={3} style={{ display: state7 }}>
+            <GalleryTitle variant="h2">Visual Novel</GalleryTitle>
+
+            <img
+              alt="Couverture projet visual novel"
+              style={{ width: "150px" }}
+            />
+
+            <Stack flexDirection="row" gap={2}>
+              <GalleryTxt>PYTHON</GalleryTxt>
+            </Stack>
+
+            {/*-----------------------------------------------*/}
+            {/*------------VISUAL NOVEL MODAL*/}
+            {/*------------------------------------------------*/}
+
+            <TransitionsModal
+              functionOpen={handleOpen7}
+              functionClose={handleClose7}
+              stateOpen={open7}
+              description={t("galleryVNDesc")}
+              alt={t("galleryVNAlt")}
+            />
+            <GalleryModalBtn onClick={handleOpen7} value="Game">
               {t("galleryBtn")}
             </GalleryModalBtn>
           </GalleryProjectsGridItem>

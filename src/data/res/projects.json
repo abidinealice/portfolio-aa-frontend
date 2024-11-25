@@ -27,5 +27,41 @@
     "link": "https://github.com/abidinealice/mvg-app",
     "type": "be",
     "tags": ["NODE", "EXPRESS"]
+  },
+  {
+    "id": "alab3",
+    "title": "Portfolio",
+    "cover": "",
+    "description": "Portfolio Sophie Bluel, architecte d'intérieur",
+    "link": "https://github.com/abidinealice/oc-portfoliosophie-aa",
+    "type": "fe",
+    "tags": ["HTML", "CSS", "JS"]
+  },
+  {
+    "id": "alab4",
+    "title": "Portfolio",
+    "cover": "",
+    "description": "Portfolio Nina Carducci, Photographe",
+    "link": "https://github.com/abidinealice/nina-carducci",
+    "type": "fe",
+    "tags": ["SEO"]
+  },
+  {
+    "id": "alab5",
+    "title": "Quizz",
+    "cover": "",
+    "description": "Quizz mathématiques et francais",
+    "link": "https://github.com/abidinealice/quizz-react",
+    "type": "fe",
+    "tags": ["REACT", "TS", "SASS"]
+  },
+  {
+    "id": "alab6",
+    "title": "Visual Novel",
+    "cover": "",
+    "description": "Jeu visual novel",
+    "link": "",
+    "type": "game",
+    "tags": ["PYTHON"]
   }
 ]
