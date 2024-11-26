@@ -9,8 +9,8 @@ export const GalleryContainer = styled(Grid2)(() => ({
   display: "flex",
   flexDirection: "column",
   gap: "20px",
-  margin: "70px 15% 0 15%",
-  paddingBottom:"30px"
+  margin: "70px 0 0 0",
+  paddingBottom:"30px",
 }));
 
 export const GalleryProjectsBox = styled(Box)(({ theme }) => ({
@@ -28,7 +28,6 @@ export const GalleryProjectsGrid = styled(Grid2)(({ theme }) => ({
   padding: "20px",
   width: "100%",
   [theme.breakpoints.down("md")]: {
-    flexDirection: "column",
   },
 }));
 

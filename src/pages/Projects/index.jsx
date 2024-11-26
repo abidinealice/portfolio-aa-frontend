@@ -1,5 +1,5 @@
 import { useLanguageContext } from "../../utils/Context/languageContext";
-import Gallery from "../../components/Gallery";
+import GalleryV2 from "../../components/Gallery/GalleryV2";
 import { ProjectContainer } from "../../styles/projects";
 import TextAnimation from "../../components/Animation/text";
 
@@ -9,7 +9,7 @@ function Projects() {
   return (
     <ProjectContainer id="sectionProjects" className="section">
       <TextAnimation title={t("projectsTitle")} />
-      <Gallery />
+      <GalleryV2 />
     </ProjectContainer>
   );
 }
