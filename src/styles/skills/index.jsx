@@ -13,7 +13,7 @@ export const SkillsContainer = styled(Box)(() => ({
 
 export const SkillsGrid = styled(Grid2)(({ theme }) => ({
   margin: "25px 0 0 0",
-  paddingBottom:"30px",
+  padding:"0 10px 30px 10px",
   position: "relative",
   zIndex: "2",
   [theme.breakpoints.down("md")]: {},
@@ -31,7 +31,6 @@ export const SkillsBubbleBox = styled(Grid2)(({ theme }) => ({
   borderRadius: "0 35px 35px 35px",
   backgroundColor: Colors.bubbleTextBG,
   boxShadow: "5px 5px 3px #6f44493d",
-  width:"385px",
   [theme.breakpoints.down("md")]: {
   },
 }));
