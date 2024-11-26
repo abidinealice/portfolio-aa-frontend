@@ -18,6 +18,7 @@ export const GalleryProjectsBox = styled(Box)(({ theme }) => ({
   borderRadius: "20px",
   display: "flex",
   alignItems: "center",
+  flexDirection: "column",
 }));
 
 export const GalleryProjectsGrid = styled(Grid2)(({ theme }) => ({
