@@ -20,10 +20,9 @@ export const SkillsGrid = styled(Grid2)(({ theme }) => ({
 }));
 
 export const SkillGrid = styled(Grid2)(({ theme }) => ({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  [theme.breakpoints.down("md")]: {},
+  [theme.breakpoints.down("md")]: {
+    width:"100%",
+  },
 }));
 
 export const SkillsBubbleBox = styled(Grid2)(({ theme }) => ({

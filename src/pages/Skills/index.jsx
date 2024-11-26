@@ -12,6 +12,7 @@ import {
   SkillsTypographySubTitle,
   SkillsTypographyTxt,
   SkillsGrid,
+  SkillGrid,
   SkillsBubbleBox,
   SkillsBubbleTitleBox,
 } from "../../styles/skills";
@@ -37,7 +38,7 @@ function Skills() {
         {/*-------------------------------------------------------*/}
         {/*-------------------WEB DEV*/}
         {/*--------------------------------------------------------*/}
-        <Grid2 item>
+        <SkillGrid item>
           <SkillsBubbleTitleBox
             container
             justifyContent="center"
@@ -69,12 +70,12 @@ function Skills() {
               </Grid2>
             ))}
           </SkillsBubbleBox>
-        </Grid2>
+        </SkillGrid>
 
         {/*-------------------------------------------------------*/}
         {/*-------------------WEB DESIGN*/}
         {/*--------------------------------------------------------*/}
-        <Grid2 item>
+        <SkillGrid item>
           <SkillsBubbleTitleBox
             container
             justifyContent="center"
@@ -106,12 +107,12 @@ function Skills() {
               </Grid2>
             ))}
           </SkillsBubbleBox>
-        </Grid2>
+        </SkillGrid>
 
         {/*-------------------------------------------------------*/}
         {/*-------------------TOOLS*/}
         {/*--------------------------------------------------------*/}
-        <Grid2 item>
+        <SkillGrid item>
           <SkillsBubbleTitleBox
             container
             justifyContent="center"
@@ -143,7 +144,7 @@ function Skills() {
               </Grid2>
             ))}
           </SkillsBubbleBox>
-        </Grid2>
+        </SkillGrid>
       </SkillsGrid>
     </SkillsContainer>
   );
