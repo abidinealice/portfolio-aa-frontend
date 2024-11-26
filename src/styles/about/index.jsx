@@ -16,6 +16,7 @@ export const AboutGrid = styled(Grid2)(() => ({
   flexDirection: "column",
   gap: "50px",
   marginTop: "70px",
+  padding:"0 10px 30px 10px",
   alignItems: "center",
 }));
 
@@ -28,7 +29,6 @@ export const AboutBubbleBox = styled(Box)(({ theme }) => ({
   backgroundColor: Colors.bubbleTextBG,
   boxShadow: "5px 5px 3px #6f44493d",
   height: "150px",
-  width:"385px",
   [theme.breakpoints.down("md")]: {
   },
 }));
