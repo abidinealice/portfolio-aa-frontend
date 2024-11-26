@@ -14,7 +14,6 @@ export default function TransitionsModal({
   stateOpen,
   pic,
   link,
-
   alt,
 }) {
   return (

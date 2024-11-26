@@ -11,10 +11,17 @@ import {
 } from "../../styles/gallery";
 import projects from "../../data/res/projects.json"
 import { useLanguageContext } from "../../utils/Context/languageContext";
+import { useState } from "react";
+import Modal from '@mui/material/Modal';
+
 
 function GalleryV2() {
     //Translation
     const { t } = useLanguageContext();
+
+    const [ listIndex, setListIndex ] = useState(undefined);
+    const [open, setOpen] = React.useState(false);
+    const handleClose = () => setOpen(false);
 
     return (
         <GalleryContainer>
@@ -24,7 +31,7 @@ function GalleryV2() {
             {/*-------------------PROJECTS*/}
             {/*--------------------------------------------------------*/}
 
-            {projects.map(({ id, title, cover, alt, description, link, tags }) => (
+            {projects.map(({ id, title, cover, alt, pic, description, link, tags }) => (
             <GalleryProjectsGridItem item xs={2} sm={4} md={4} key={id}>
             <GalleryTitle variant="h2">{title}</GalleryTitle>
 
@@ -40,9 +47,23 @@ function GalleryV2() {
                 ))}
             </Stack>
 
-            <GalleryModalBtn>
+            <GalleryModalBtn onClick={() => listIndex === id ? setListIndex(undefined) : (setListIndex(id), setOpen(true))}>
                 {t("galleryBtn")}
                 </GalleryModalBtn>
+                {id === listIndex ?
+                    <div>fhjfbshd
+                        <Modal
+                    open={open}
+                    onClose={handleClose}
+                    aria-labelledby="modal-modal-title"
+                    aria-describedby="modal-modal-description"
+                  >
+                    <div>
+                      TEST MOSAL
+                    </div>
+                  </Modal>
+                    </div> : null   
+                }
             </GalleryProjectsGridItem>
             ))}
             
