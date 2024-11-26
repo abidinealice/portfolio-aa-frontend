@@ -12,7 +12,7 @@ import {
 import projects from "../../data/res/projects.json"
 import { useLanguageContext } from "../../utils/Context/languageContext";
 import { useState } from "react";
-import Modal from '@mui/material/Modal';
+import ModalV2 from "../Modal/ModalV2";
 
 
 function GalleryV2() {
@@ -28,7 +28,7 @@ function GalleryV2() {
         <GalleryProjectsBox style={{ position: "relative", zIndex: "2" }}>
             <GalleryProjectsGrid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
             {/*-------------------------------------------------------*/}
-            {/*-------------------PROJECTS*/}
+            {/*------------------- PROJECTS*/}
             {/*--------------------------------------------------------*/}
 
             {projects.map(({ id, title, cover, alt, pic, description, link, tags }) => (
@@ -50,19 +50,20 @@ function GalleryV2() {
             <GalleryModalBtn onClick={() => listIndex === id ? setListIndex(undefined) : (setListIndex(id), setOpen(true))}>
                 {t("galleryBtn")}
                 </GalleryModalBtn>
+
+            {/*-------------------------------------------------------*/}
+            {/*------------------- PROJECTS MODAL*/}
+            {/*--------------------------------------------------------*/}
                 {id === listIndex ?
-                    <div>fhjfbshd
-                        <Modal
-                    open={open}
-                    onClose={handleClose}
-                    aria-labelledby="modal-modal-title"
-                    aria-describedby="modal-modal-description"
-                  >
-                    <div>
-                      TEST MOSAL
-                    </div>
-                  </Modal>
-                    </div> : null   
+                    <ModalV2
+                        functionOpen={open}
+                        functionClose={handleClose}
+                        stateOpen={open}
+                        description={description}
+                        pic={pic}
+                        link={link}
+                        alt={alt}
+                  /> : null   
                 }
             </GalleryProjectsGridItem>
             ))}
